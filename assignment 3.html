@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> sending amount </title>
+</head>
+<body>
+<script>
+var environments = prompt("enter the value","");
+var dev,test,stage,prod;
+var sendingamount = parseInt(prompt("enter the sendingamount"));
+if(environments == "dev"){
+    sendingamount += sendingamount*0.1;
+    }
+else if(environments == "test"){
+    sendingamount += sendingamount*0.2;
+    }
+else if(environments == "stage"){
+    sendingamount += sendingamount*0.3;
+    }
+else if(environments == "prod"){
+    sendingamount += sendingamount*0.05;
+    }
+else{
+    sendingamount;
+    }
+document.write(sendingamount);
+</script>
+</body>
+</head>
+</html>
