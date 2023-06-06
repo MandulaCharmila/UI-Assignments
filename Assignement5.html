@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <script>
+        function displayValues() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var dob = document.getElementById("dob").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+
+            var displayDiv = document.getElementById("displayValues");
+            displayDiv.innerHTML = "First Name: " + firstName + "<br>" +
+                                   "Last Name: " + lastName + "<br>" +
+                                   "Date of Birth: " + dob + "<br>" +
+                                   "Email: " + email + "<br>" +
+                                   "Phone Number: " + phoneNumber;
+        }
+    </script>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+        <button type="button" onclick="displayValues()">Submit</button>
+    </form>
+
+    <div id="displayValues"></div>
+</body>
+</html>
